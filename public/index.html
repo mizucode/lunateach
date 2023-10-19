@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- End Font Family -->
+
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- End Font Awesome -->
+
+		<!-- Link Css -->
+		<link href="./css/style.css" rel="stylesheet" />
+		<!-- End Link Css -->
+		<title>Lunateach</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="homepage-header">
+			<div class="py-4 flex justify-between items-center px-4 lg:px-6">
+				<div class="flex justify-between items-center text-white" id="logo">
+					<h1 class="font-bold text-2xl md:text-3xl lg:text-4xl">
+						<a href="#">LunaTeach.</a>
+					</h1>
+				</div>
+				<div class="lg:hidden">
+					<button id="hamburger-open" onclick="">
+						<i
+							class="fa-solid fa-bars text-2xl md:text-3xl text-white"
+							id="hamburger-open-bars"
+						></i>
+					</button>
+				</div>
+				<nav
+					class="absolute z-50 lg:static lg:flex justify-between items-center lg:top-0 w-full lg:w-auto h-[25rem] lg:h-auto nonactive left-0 bg-white lg:bg-transparent mx-auto lg:mx-0 transition-all duration-300 ease-in-out"
+					id="navbar-menu"
+				>
+					<div
+						class="px-8 lg:px-0 pt-16 lg:pt-0 font-medium text-black lg:flex justify-center gap-8 items-center"
+					>
+						<h3 class="opacity-40 lg:hidden">Lunateach Menu</h3>
+						<ul
+							class="mt-2 lg:flex justify-around lg:justify-between gap-8 lg:gap-8 items-center lg:text-white lg:text-xl"
+							id="navbar-ul"
+						>
+							<li class="">
+								<a href="" class="flex justify-between items-center"
+									>Homepage <i class="fa-solid fa-right-long pt-2 lg:hidden"></i
+								></a>
+							</li>
+							<li class="mt-2 lg:mt-0">
+								<a href="" class="flex justify-between items-center"
+									>Koleksi <i class="fa-solid fa-right-long pt-2 lg:hidden"></i
+								></a>
+							</li>
+							<li class="mt-2 lg:mt-0">
+								<a href="" class="flex justify-between items-center"
+									>Repositori
+									<i class="fa-solid fa-right-long pt-2 lg:hidden"></i
+								></a>
+							</li>
+							<li class="mt-2 lg:mt-0">
+								<a href="" class="flex justify-between items-center"
+									>Rekomendasi
+									<i class="fa-solid fa-right-long pt-2 lg:hidden"></i
+								></a>
+							</li>
+							<li class="mt-2 lg:mt-0">
+								<a href="" class="flex justify-between items-center"
+									>Link <i class="fa-solid fa-right-long pt-2 lg:hidden"></i
+								></a>
+							</li>
+						</ul>
+						<a
+							href=""
+							class="bg-ungu w-full mt-12 lg:mt-0 lg:px-8 hover:bg-blue-400 rounded-md flex justify-center"
+						>
+							<span class="py-2">Login</span>
+						</a>
+						<button type="button" id="hamburger-close" class="lg:hidden">
+							<i class="fa-solid fa-xmark absolute top-6 text-xl right-8"></i>
+						</button>
+					</div>
+				</nav>
+				<div
+					class="w-full overflow-auto lg:hidden h-screen z-40 absolute bg-black opacity-50 hidden top-0 left-0 transition-all duration-300 ease-in-out"
+					id="overlay"
+				></div>
+			</div>
+		</header>
+		<!-- End Header -->
+
+		<!-- Home Section -->
+		<section
+			id="home"
+			class="pt-[5rem] bg-dasar w-full h-auto overflow-hidden rounded-b-[3rem] shadow-lg"
+		>
+			<div class="">
+				<div
+					class="flex flex-wrap lg:flex-nowrap justify-center items-center lg:px-24 px-4 md:px-6"
+				>
+					<div class="w-full lg:px-4">
+						<h1
+							class="text-3xl md:text-6xl font-bold lg:text-start text-white lg:whitespace-nowrap"
+						>
+							Belajar Bersama LunaTeach
+							<span
+								class="block font-semibold text-niger text-base md:text-3xl lg:text-2xl my-2 lg:whitespace-normal"
+								>Anda dapat memilih program dan mengatur jumlah pertemuan sesuai
+								kebutuhan Putra-Putri Anda</span
+							>
+						</h1>
+						<div class="mt-8">
+							<a
+								href=""
+								class="text-dasar bg-white hover:bg-slate-50 px-4 py-4 md:text-2xl text-center rounded-xl"
+								>Pesan Sekarang<i
+									class="fa-solid fa-angle-right ml-5 text-sm md:text-xl"
+								></i
+							></a>
+						</div>
+					</div>
+
+					<div
+						class="w-full mx-auto lg:pt-0 scale-150 mt-32 md:mt-20 lg:mt-0 lg:scale-100 pr-2 lg:pr-0"
+					>
+						<img
+							src="../images/hero.webp"
+							class="w-full h-full object-cover"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Home Section -->
+		<section class="pt-[10rem]">
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
+			tempora doloremque quibusdam vero aliquam adipisci facilis cumque
+			praesentium ab autem exercitationem eos unde porro consequatur saepe rem
+			reiciendis sint eveniet, dolore dicta reprehenderit ipsum? Quam quis
+			explicabo quibusdam? Repudiandae quibusdam maxime, placeat odio libero
+			nisi unde est? Blanditiis, cum doloribus alias facere ea perspiciatis.
+			Maxime, aut necessitatibus. Optio quidem quam consequuntur facere quis
+			vitae exercitationem culpa vero voluptate magni. Quisquam, culpa quae
+			beatae tempore rerum autem cupiditate repellat exercitationem nostrum sint
+			voluptatibus iste magnam mollitia et! Pariatur unde officiis
+			exercitationem rerum architecto illum? Sit iste cupiditate culpa delectus
+			doloremque ex qui ut a? Delectus, rerum voluptates rem corrupti eum vero
+			eius dolorum quisquam aut voluptas culpa cum blanditiis ea consequuntur
+			recusandae iste minus vel ipsam impedit nesciunt accusamus illum animi
+			aliquam! Rem quo rerum eum consequuntur facere labore omnis quos velit
+			eius tempore aliquam fuga, inventore pariatur dignissimos nobis? Eum.
+		</section>
+
+		<!-- Javascript -->
+		<script>
+			const navbarNav = document.querySelector("#navbar-menu");
+			const hamburgerOpen = document.querySelector("#hamburger-open");
+			const hamburgerClose = document.querySelector("#hamburger-close");
+			const overlay = document.querySelector("#overlay");
+
+			const toggleMenu = () => {
+				hamburgerOpen.classList.toggle("active");
+				hamburgerOpen.classList.toggle("nonactive");
+				navbarNav.classList.toggle("active");
+				navbarNav.classList.toggle("nonactive");
+				overlay.classList.toggle("block");
+				overlay.classList.toggle("hidden");
+			};
+
+			hamburgerOpen.addEventListener("click", toggleMenu);
+			hamburgerClose.addEventListener("click", toggleMenu);
+
+			window.addEventListener("scroll", function () {
+				const header = document.querySelector("header");
+				const fixedNav = header.offsetTop;
+				const homepageBars = document.querySelector("#hamburger-open-bars");
+				const logo = document.querySelector("#logo");
+				const navbarUl = document.querySelector("#navbar-ul");
+
+				if (window.pageYOffset > fixedNav) {
+					header.classList.remove("homepage-header");
+					header.classList.add("navbar-fixed");
+					logo.classList.replace("text-white", "text-black");
+					homepageBars.classList.replace("text-white", "text-black");
+					navbarUl.classList.replace("lg:text-white", "lg:text-black");
+				} else {
+					header.classList.add("homepage-header");
+					header.classList.remove("navbar-fixed");
+					logo.classList.replace("text-black", "text-white");
+					homepageBars.classList.replace("text-black", "text-white");
+					navbarUl.classList.replace("lg:text-black", "lg:text-white");
+				}
+			});
+		</script>
+		<!-- End JS -->
+	</body>
+</html>
