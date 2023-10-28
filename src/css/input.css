@@ -41,3 +41,40 @@ body {
 }
 
 /* End Homepage */
+
+@layer components {
+	.testimoni-section {
+		@apply flex flex-col gap-4;
+	}
+	.testimoni-ul {
+		@apply flex gap-4 items-center;
+	}
+	.testimoni-li-icon {
+		@apply w-12 h-12 text-white  rounded-md flex items-center justify-center;
+	}
+	.testimoni-li-text {
+		@apply flex flex-col items-start;
+	}
+	.testimoni-li-p {
+		@apply text-dark text-xl font-bold;
+	}
+	.testimoni-li-span {
+		@apply text-slate-400 text-sm;
+	}
+}
+
+/* COntainer why */
+@layer components {
+	.container-why {
+		@apply w-full p-8  rounded-xl;
+	}
+	.why-ul {
+		@apply text-white text-center flex flex-col gap-2;
+	}
+	.why-li-icon {
+		@apply font-bold text-5xl;
+	}
+	.why-li-heading {
+		@apply font-bold text-3xl;
+	}
+}
