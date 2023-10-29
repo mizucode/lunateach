@@ -160,7 +160,7 @@
 							<i class="fa-solid fa-star"></i>
 						</li>
 						<li class="testimoni-li-text">
-							<p class="testimoni-li-p">4.9</p>
+							<p class="testimoni-li-p counting" data-target="4.9">0</p>
 							<span class="testimoni-li-span">Rating Kepuasan Client</span>
 						</li>
 					</ul>
@@ -169,7 +169,7 @@
 							<i class="fa-solid fa-graduation-cap"></i>
 						</li>
 						<li class="testimoni-li-text">
-							<p class="testimoni-li-p">512</p>
+							<p class="testimoni-li-p counting" data-target="512">0</p>
 							<span class="testimoni-li-span">Pengajar Profesional</span>
 						</li>
 					</ul>
@@ -178,7 +178,7 @@
 							<i class="fa-solid fa-quote-left"></i>
 						</li>
 						<li class="testimoni-li-text">
-							<p class="testimoni-li-p">3333</p>
+							<p class="testimoni-li-p counting" data-target="3333">0</p>
 							<span class="testimoni-li-span">Testimoni Siswa</span>
 						</li>
 					</ul>
@@ -187,7 +187,7 @@
 							<i class="fa-solid fa-heart"></i>
 						</li>
 						<li class="testimoni-li-text">
-							<p class="testimoni-li-p">803K</p>
+							<p class="testimoni-li-p counting" data-target="803">0</p>
 							<span class="testimoni-li-span">Pengikut Sosial Media</span>
 						</li>
 					</ul>
@@ -196,7 +196,7 @@
 							<i class="fa-solid fa-user"></i>
 						</li>
 						<li class="testimoni-li-text">
-							<p class="testimoni-li-p">2800</p>
+							<p class="testimoni-li-p counting" data-target="2800">0</p>
 							<span class="testimoni-li-span">Siswa Tergabung</span>
 						</li>
 					</ul>
@@ -461,6 +461,38 @@
 					homepageBars.classList.replace("text-black", "text-white");
 					navbarUl.classList.replace("lg:text-black", "lg:text-white");
 				}
+			});
+
+			const countingElements = document.querySelectorAll(".counting");
+
+			countingElements.forEach((element) => {
+				const targetValue = parseFloat(element.getAttribute("data-target"));
+				let currentValue = 0;
+				const increment = targetValue / 300; // Adjust the speed of the animation by changing this value.
+
+				const updateValue = () => {
+					if (currentValue < targetValue) {
+						currentValue += increment;
+						if (targetValue === 803) {
+							element.innerText = `${Math.floor(currentValue)}K`;
+						} else {
+							element.innerText =
+								targetValue % 1 === 0
+									? Math.floor(currentValue)
+									: currentValue.toFixed(1);
+						}
+						setTimeout(updateValue, 10); // Adjust the speed of the animation by changing this value.
+					} else {
+						if (targetValue === 803) {
+							element.innerText = `${targetValue}K`;
+						} else {
+							element.innerText =
+								targetValue % 1 === 0 ? targetValue : targetValue.toFixed(1);
+						}
+					}
+				};
+
+				updateValue();
 			});
 		</script>
 		<!-- End JS -->
