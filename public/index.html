@@ -154,7 +154,7 @@
 		<!-- End Home Section -->
 		<section class="bg-white shadow-2xl h-auto mt-16 rounded-xl mx-2">
 			<div class="container py-4">
-				<div class="testimoni-section">
+				<div class="testimoni-section wrapper">
 					<ul class="testimoni-ul">
 						<li class="testimoni-li-icon bg-yellow-500">
 							<i class="fa-solid fa-star"></i>
@@ -421,6 +421,20 @@
 			</div>
 		</section>
 		<!-- Biaya -->
+		<!-- Paket Page -->
+		<section class="my-16">
+			<div class="container">
+				<div>
+					<h1 class="font-bold text-center text-4xl">
+						Pilih Paket Pertemuan
+						<span class="text-dasar">LUNA</span> Teacher
+					</h1>
+					<p class="">Pilih paket sesuai dengan kebutuhan siswa</p>
+				</div>
+				<main class="shadow-sm rounded-md w-full h-full">sadwdawdawdaw</main>
+			</div>
+		</section>
+		<!-- End Page -->
 
 		<!-- Javascript -->
 		<script>
@@ -464,35 +478,51 @@
 			});
 
 			const countingElements = document.querySelectorAll(".counting");
+			const options = {
+				threshold: 0.5,
+			};
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const targetValue = parseFloat(
+							entry.target.getAttribute("data-target")
+						);
+						let currentValue = 0;
+						const increment = targetValue / 100;
+
+						const updateValue = () => {
+							if (currentValue < targetValue) {
+								currentValue += increment;
+								if (targetValue === 803) {
+									entry.target.innerText = `${Math.floor(currentValue)}K`;
+								} else {
+									entry.target.innerText =
+										targetValue % 1 === 0
+											? Math.floor(currentValue)
+											: currentValue.toFixed(1);
+								}
+								setTimeout(updateValue, 10);
+							} else {
+								if (targetValue === 803) {
+									entry.target.innerText = `${targetValue}K`;
+								} else {
+									entry.target.innerText =
+										targetValue % 1 === 0
+											? targetValue
+											: targetValue.toFixed(1);
+								}
+							}
+						};
+
+						updateValue();
+						observer.unobserve(entry.target);
+					}
+				});
+			}, options);
 
 			countingElements.forEach((element) => {
-				const targetValue = parseFloat(element.getAttribute("data-target"));
-				let currentValue = 0;
-				const increment = targetValue / 300; // Adjust the speed of the animation by changing this value.
-
-				const updateValue = () => {
-					if (currentValue < targetValue) {
-						currentValue += increment;
-						if (targetValue === 803) {
-							element.innerText = `${Math.floor(currentValue)}K`;
-						} else {
-							element.innerText =
-								targetValue % 1 === 0
-									? Math.floor(currentValue)
-									: currentValue.toFixed(1);
-						}
-						setTimeout(updateValue, 10); // Adjust the speed of the animation by changing this value.
-					} else {
-						if (targetValue === 803) {
-							element.innerText = `${targetValue}K`;
-						} else {
-							element.innerText =
-								targetValue % 1 === 0 ? targetValue : targetValue.toFixed(1);
-						}
-					}
-				};
-
-				updateValue();
+				observer.observe(element);
 			});
 		</script>
 		<!-- End JS -->
