@@ -1516,6 +1516,17 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-\[rgba\(6\2c _24\2c _44\2c _0\.4\)_0px_0px_0px_2px\2c _rgba\(6\2c _24\2c _44\2c _0\.65\)_0px_4px_6px_-1px\2c _rgba\(255\2c _255\2c _255\2c _0\.08\)_0px_1px_0px_inset\] {
+  --tw-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  --tw-shadow-colored: 0px 0px 0px 2px var(--tw-shadow-color), 0px 4px 6px -1px var(--tw-shadow-color), inset 0px 1px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[1px\] {
+  --tw-shadow-color: 1px;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
