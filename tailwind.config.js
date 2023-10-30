@@ -9,6 +9,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				inter: ["Inter"],
+				poppins: ["Poppins"],
 			},
 			colors: {
 				dasar: "#29aae1",

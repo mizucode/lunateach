@@ -1,6 +1,6 @@
 @tailwind base;
 body {
-	@apply font-inter bg-putih-dasar;
+	@apply font-poppins bg-putih-dasar;
 }
 
 .navbar-fixed {
@@ -76,5 +76,14 @@ body {
 	}
 	.why-li-heading {
 		@apply font-bold text-3xl;
+	}
+}
+
+@layer components {
+	.paket-ul {
+		@apply flex gap-2 items-center;
+	}
+	.paket-li-icon {
+		@apply text-4xl text-green-400;
 	}
 }
